@@ -1,5 +1,8 @@
 let computerChoice = 0;
 let playerChoice = 0;
+let wins = 0;
+let losses = 0;
+
 
 const buttons = document.querySelectorAll('button');
 
@@ -48,18 +51,30 @@ function rpsGame() {
         winnerText.innerHTML = "Tie! try again."
     } else if (playerChoice == 1 && computerChoice == 2) {
         winnerText.innerHTML = "You lost! try again."
+        losses += 1
+        loss.innerHTML = "Losses: " + losses;
     } else if (playerChoice == 1 && computerChoice == 3) {
         winnerText.innerHTML = "You Won! try again."
+        wins += 1
+        win.innerHTML = "Score: " + wins;
     } else if (playerChoice == 2 && computerChoice == 1) {
         winnerText.innerHTML = "You Won! try again."
+        wins += 1
+        win.innerHTML = "Score: " + wins;
     } else if (playerChoice == 2 && computerChoice == 2) {
         winnerText.innerHTML = "Tie! try again."
     } else if (playerChoice == 2 && computerChoice == 3) {
         winnerText.innerHTML = "You lost! try again."
+        losses += 1
+        loss.innerHTML = "Losses: " + losses;
     } else if (playerChoice == 3 && computerChoice == 1) {
         winnerText.innerHTML = "You lost! try again."
+        losses += 1
+        loss.innerHTML = "Losses: " + losses;
     } else if (playerChoice == 3 && computerChoice == 2) {
         winnerText.innerHTML = "You Won! try again."
+        wins += 1
+        win.innerHTML = "Wins: " + wins;
     } else {
         winnerText.innerHTML = "Tie! try again"
     }
@@ -68,6 +83,7 @@ function rpsGame() {
 let winnerText = document.querySelector(".winnerText")
 let playerText = document.querySelector(".player-text")
 let computerText = document.querySelector(".computer-text")
+let win = document.querySelector('.wins')
+let loss = document.querySelector('.loss')
 
-computerSelection(1, 3)
 

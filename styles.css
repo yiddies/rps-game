@@ -54,12 +54,34 @@ span {
     margin-top: 35px;
 }
 
+.wins {
+    display: flex;
+    justify-content: center;
+    color: #bfbfbf;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.loss {
+    display: flex;
+    justify-content: center;
+    color: #bfbfbf;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
 .winnerText {
     display: flex;
     justify-content: center;
     color: #bfbfbf;
     margin-top: 120px;
-    margin-bottom: 100px;
+
     font-size: 25px;
     font-weight: bold;
     text-decoration: underline;
