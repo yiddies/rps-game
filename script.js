@@ -16,14 +16,14 @@ buttons.forEach((buttons) => {
 
 function playerSelection(buttons) {
     if (buttons.id === 'paper') {
+        playerText.innerHTML = "Players Choice: Paper"
         return playerChoice = 2
-        console.log(playerChoice)
     } else if (buttons.id === 'rock') {
+        playerText.innerHTML = "Players Choice: Rock"
         return playerChoice = 1
-        console.log(playerChoice)
     } else if (buttons.id === 'scissors') {
+        playerText.innerHTML = "Players Choice: Scissors"
         return playerChoice = 3
-        console.log(playerChoice)
     } else {
         return
     }
@@ -33,30 +33,41 @@ function playerSelection(buttons) {
 function computerSelection(min, max) {
     computerChoice = Math.floor(Math.random() * (max - min + 1) + min)
     rpsGame(computerChoice)
+    if (computerChoice === 1) {
+        computerText.innerHTML = "Computers Choice: Rock"
+    } else if (computerChoice === 2) {
+        computerText.innerHTML = "Computers Choice: Paper"
+    } else {
+        computerText.innerHTML = "Computers Choice: Scissors"
+    }
 }
 
 
 function rpsGame() {
     if (playerChoice === 1 && computerChoice === 1) {
-        console.log("Tie! try again.")
+        winnerText.innerHTML = "Tie! try again."
     } else if (playerChoice == 1 && computerChoice == 2) {
-        console.log("You lost! try again.")
+        winnerText.innerHTML = "You lost! try again."
     } else if (playerChoice == 1 && computerChoice == 3) {
-        console.log("You Won! try again.")
+        winnerText.innerHTML = "You Won! try again."
     } else if (playerChoice == 2 && computerChoice == 1) {
-        console.log("You Won! try again.")
+        winnerText.innerHTML = "You Won! try again."
     } else if (playerChoice == 2 && computerChoice == 2) {
-        console.log("Tie! try again.")
+        winnerText.innerHTML = "Tie! try again."
     } else if (playerChoice == 2 && computerChoice == 3) {
-        console.log("You lost! try again.")
+        winnerText.innerHTML = "You lost! try again."
     } else if (playerChoice == 3 && computerChoice == 1) {
-        console.log("You lost! try again.")
+        winnerText.innerHTML = "You lost! try again."
     } else if (playerChoice == 3 && computerChoice == 2) {
-        console.log("You Won! try again.")
+        winnerText.innerHTML = "You Won! try again."
     } else {
-        console.log("Tie! try again")
+        winnerText.innerHTML = "Tie! try again"
     }
 }
+
+let winnerText = document.querySelector(".winnerText")
+let playerText = document.querySelector(".player-text")
+let computerText = document.querySelector(".computer-text")
 
 computerSelection(1, 3)
 
