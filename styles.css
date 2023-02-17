@@ -50,7 +50,8 @@ span {
     color: #bfbfbf;
     font-size: 25px;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: overline;
+    margin-top: 35px;
 }
 
 .winnerText {
